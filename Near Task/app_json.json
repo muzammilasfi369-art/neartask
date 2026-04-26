@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "NearTask",
+    "slug": "neartask",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0f0f1a"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0f0f1a"
+      },
+      "package": "com.muzammilasfi.neartask",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "FOREGROUND_SERVICE",
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "NearTask needs your location to remind you when you arrive at saved places.",
+          "locationAlwaysPermission": "NearTask needs background location to remind you even when app is closed.",
+          "locationWhenInUsePermission": "NearTask needs your location to detect when you arrive at saved places."
+        }
+      ],
+      "expo-task-manager",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#6c63ff",
+          "sounds": []
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "your-eas-project-id"
+      }
+    }
+  }
+}
